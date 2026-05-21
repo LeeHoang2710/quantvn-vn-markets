@@ -1,0 +1,9 @@
+Chiến lược mình làm là theo hướng breakout, nhưng có thêm điều kiện lọc tín hiệu chứ không vào lệnh chỉ vì giá tăng. Mình dùng chỉ báo để kiểm tra xem giá có thật sự bứt ra khỏi vùng trước đó không, và dòng tiền hoặc động lượng có còn ủng hộ không. Khi đủ điều kiện thì vào lệnh, còn khi tín hiệu yếu đi thì thoát.
+
+Kết quả test mình thấy là historical after fees có estimated annual return 12.95%, maximum drawdown -11.12% và Sharpe ratio 1.16. Ở phần out-of-sample thì annual return là 15.42%, drawdown là -7.12% và Sharpe ratio là 2.17. Win rate là 45.60%, profit factor là 1.37, average winning trade là 8.54%, còn average losing trade khoảng -5.24. Mình thấy điểm đáng chú ý là phần out-of-sample vẫn ổn, không bị xấu đi quá nhiều.
+
+Điểm mạnh của chiến lược là logic khá rõ và có bộ lọc tín hiệu nên đỡ vào lệnh bừa. Drawdown cũng không quá lớn so với mức return tạo ra, nên nhìn chung mình thấy chiến lược khá cân bằng.
+
+Điểm yếu là phần tham số vẫn còn chọn thủ công, chưa test nhiều trường hợp thị trường khác nhau. Win rate cũng chưa cao nên nếu thị trường đi ngang hoặc nhiễu thì có thể bị sai liên tiếp. Khi chạy thực tế thì còn thêm rủi ro về phí, trượt giá và dữ liệu live.
+
+Nếu có thêm thời gian thì mình sẽ test trên nhiều mã hơn, thử thêm nhiều bộ tham số hơn và bổ sung phần quản trị rủi ro rõ hơn. Mình nghĩ chiến lược hiện tại là một bản đầu khá ổn, nhưng vẫn còn nhiều chỗ để cải thiện.
